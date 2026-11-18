@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Suyash Srivastava – Backend & AI Developer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#f6f5f1;--s:#fff;--t:#16181d;--m:#5f646d;--a:#5b3df5;--a2:#0aa58f;--l:#e3e1da;--c:#efede6;--g:rgba(91,61,245,.12);
+--sans:"Space Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0f13;--s:#171920;--t:#ecebe6;--m:#9a9ea8;--a:#8b7bff;--a2:#2dd4bf;--l:#2a2d37;--c:#1f222a;--g:rgba(139,123,255,.16);color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e0f13;--s:#171920;--t:#ecebe6;--m:#9a9ea8;--a:#8b7bff;--a2:#2dd4bf;--l:#2a2d37;--c:#1f222a;--g:rgba(139,123,255,.16);color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px;scroll-padding-top:calc(80px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--t);font:16px/1.65 var(--sans);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:20}
+button{font:inherit;cursor:pointer;color:inherit}a{color:inherit}
+#bg{position:fixed;inset:0;width:100%;height:100%;z-index:-2;pointer-events:none}
+#bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--a2));z-index:30}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;display:flex;align-items:center;gap:6px;padding:10px 5vw;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--l)}
+nav .lg{margin-right:auto;font:500 15px var(--mono);color:var(--a)}
+nav a{text-decoration:none;color:var(--m);font-size:14px;padding:6px 10px;border-radius:8px}nav a:hover,nav a.on{color:var(--t);background:var(--c)}
+#th{background:var(--c);border:1px solid var(--l);border-radius:8px;padding:4px 10px}
+@media(max-width:700px){nav a{display:none}}
+section{max-width:1000px;margin:0 auto;padding:84px 5vw 10px}
+.eb{font:500 12px var(--mono);color:var(--a);letter-spacing:.12em;text-transform:uppercase}
+h2{font-size:clamp(26px,4vw,36px);margin:4px 0 6px;letter-spacing:-.02em}h2+p{color:var(--m);margin:0 0 28px;max-width:560px}
+.hero{position:relative;padding-top:110px;padding-bottom:30px}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.5;z-index:-1;animation:fl 12s ease-in-out infinite alternate}
+.b1{width:340px;height:340px;background:var(--a);top:20px;right:-60px;opacity:.28}.b2{width:260px;height:260px;background:var(--a2);top:200px;right:200px;opacity:.22;animation-delay:-5s}
+@keyframes fl{to{transform:translate(-40px,50px) scale(1.12)}}
+.hero h1{font-size:clamp(40px,9vw,84px);line-height:1;margin:10px 0 16px;letter-spacing:-.04em}
+.hero h1 span{background:linear-gradient(100deg,var(--a),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:clamp(17px,2.4vw,21px);color:var(--m);max-width:640px;margin:0}
+#ty{color:var(--t);border-right:2px solid var(--a);padding-right:3px;font-family:var(--mono);font-size:.9em}
+.btn{display:inline-block;margin:22px 10px 0 0;padding:11px 22px;border-radius:12px;background:var(--a);color:#fff;text-decoration:none;border:0;font-weight:600;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}.btn.alt{background:transparent;color:var(--t);border:1px solid var(--l)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.card,.stat{background:var(--s);border:1px solid var(--l);border-radius:16px;padding:20px}
+.stat b{font-size:36px;display:block;letter-spacing:-.03em;background:linear-gradient(100deg,var(--a),var(--a2));-webkit-background-clip:text;background-clip:text;color:transparent}.stat span{color:var(--m);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.chip{background:var(--c);border:1px solid var(--l);border-radius:999px;padding:6px 15px;font-size:14px;transition:.15s}
+.chip.on{background:var(--a);border-color:var(--a);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:16px}
+.pc{position:relative;overflow:hidden;cursor:pointer;transition:transform .2s,border-color .2s;transform:perspective(700px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));text-align:left;width:100%}
+.pc::after{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),var(--g),transparent 70%);opacity:0;transition:opacity .2s;pointer-events:none}
+.pc:hover{border-color:var(--a)}.pc:hover::after{opacity:1}
+.pc h3{margin:8px 0 6px;font-size:20px}.pc p{margin:0;color:var(--m);font-size:15px}
+.pc .n{font:500 12px var(--mono);color:var(--a2)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}.tags i{font:12px var(--mono);font-style:normal;background:var(--c);border-radius:6px;padding:2px 8px}
+dialog{border:1px solid var(--l);border-radius:18px;background:var(--s);color:var(--t);max-width:560px;width:calc(100% - 32px);padding:26px}
+dialog::backdrop{background:rgba(0,0,0,.55);backdrop-filter:blur(3px)}
+dialog h3{margin:0 0 8px;font-size:24px}dialog li{margin:8px 0;color:var(--m)}dialog li::marker{color:var(--a)}
+.x{float:right;background:var(--c);border:1px solid var(--l);border-radius:8px;padding:2px 10px}
+.pipe{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px}
+.pipe button{flex:1 1 130px;background:var(--s);border:1px solid var(--l);border-radius:14px;padding:14px;text-align:left;position:relative}
+.pipe button b{display:block;font:500 12px var(--mono);color:var(--a2)}
+.pipe button.on{border-color:var(--a);box-shadow:0 0 0 3px var(--g)}
+#pd{background:var(--s);border:1px dashed var(--l);border-radius:14px;padding:18px;min-height:90px}
+.skb{display:flex;flex-wrap:wrap;gap:10px;min-height:70px}
+.skb span{background:var(--s);border:1px solid var(--l);border-radius:12px;padding:9px 16px;animation:pop .35s both;transition:transform .15s,border-color .15s}
+.skb span:hover{transform:translateY(-3px) rotate(-1deg);border-color:var(--a)}
+@keyframes pop{from{opacity:0;transform:scale(.85)}}
+.term{background:#0b0c10;color:#d7d7d0;border-radius:16px;border:1px solid var(--l);font:14px/1.6 var(--mono);overflow:hidden}
+.term .h{display:flex;gap:7px;padding:10px 14px;background:#16171d}.term .h i{width:11px;height:11px;border-radius:50%;background:#444}
+#out{padding:14px 16px;max-height:260px;overflow:auto;white-space:pre-wrap}#out .c{color:#2dd4bf}#out .e{color:#9a9ea8}
+.ln{display:flex;gap:8px;padding:0 16px 14px}.ln span{color:#2dd4bf}.ln input{flex:1;background:none;border:0;outline:0;color:inherit;font:inherit}
+.tl{border-left:2px solid var(--l);padding-left:22px}.tl div{position:relative;margin-bottom:22px}
+.tl div::before{content:"";position:absolute;left:-29px;top:8px;width:12px;height:12px;border-radius:50%;background:linear-gradient(var(--a),var(--a2))}
+.tl b{display:block}.tl span{color:var(--m);font-size:14px}
+footer{text-align:center;color:var(--m);padding:60px 5vw 40px;font-size:14px}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.blob,.skb span{animation:none}html{scroll-behavior:auto}.pc{transform:none!important}}
+</style>
+</head>
+<body>
+<div id="bar"></div><canvas id="bg" aria-hidden="true"></canvas>
+<nav><span class="lg">~/suyash</span><a href="#about">About</a><a href="#projects">Projects</a><a href="#ai">RAG</a><a href="#skills">Skills</a><a href="#terminal">Terminal</a><a href="#contact">Contact</a><button id="th" aria-label="Toggle theme">◐</button></nav>
+
+<section class="hero"><div class="blob b1"></div><div class="blob b2"></div>
+<div class="eb">Backend · AI · Java</div>
+<h1>Suyash<br><span>Srivastava</span></h1>
+<p>CS undergrad at VIT building <span id="ty"></span></p>
+<a class="btn" href="#projects">See my work</a><a class="btn alt" href="#terminal">Try the terminal</a>
+</section>
+
+<section id="about" class="rv"><div class="eb">01 · About</div><h2>Fundamentals first, then the fun stuff</h2>
+<p>I like secure, well-layered backends, and I’m now adding LLM-powered features with Spring AI. Looking for full-time software engineering roles.</p>
+<div class="stats">
+<div class="stat"><b data-n="350" data-s="+">0</b><span>LeetCode problems</span></div>
+<div class="stat"><b data-n="8.65" data-d="2">0</b><span>CGPA, B.Tech CSE</span></div>
+<div class="stat"><b data-n="3">0</b><span>backend and AI projects</span></div>
+<div class="stat"><b data-n="7">0</b><span>languages I code in</span></div>
+</div></section>
+
+<section id="projects" class="rv"><div class="eb">02 · Projects</div><h2>Things I’ve built</h2><p>Filter by area. Tap a card to open the details.</p>
+<div class="chips" id="pf"></div><div class="grid" id="pg"></div></section>
+
+<section id="ai" class="rv"><div class="eb">03 · Under the hood</div><h2>How my AI Document Assistant answers</h2><p>Click through the retrieval-augmented generation pipeline.</p>
+<div class="pipe" id="pp"></div><div id="pd"></div></section>
+
+<section id="skills" class="rv"><div class="eb">04 · Skills</div><h2>Toolbox</h2><p>Pick a category.</p>
+<div class="chips" id="sf"></div><div class="skb" id="sb"></div></section>
+
+<section id="terminal" class="rv"><div class="eb">05 · Terminal</div><h2>Ask me anything</h2><p>Type <b>help</b> to see the commands.</p>
+<div class="term"><div class="h"><i></i><i></i><i></i></div><div id="out"></div><div class="ln"><span>$</span><input id="in" autocomplete="off" spellcheck="false" aria-label="Terminal command" placeholder="type a command"></div></div></section>
+
+<section id="journey" class="rv"><div class="eb">06 · Journey</div><h2>Education &amp; practice</h2><p>Where I study and how I keep sharpening.</p>
+<div class="tl">
+<div><b>B.Tech, Computer Science &amp; Engineering</b><span>Vellore Institute of Technology · 2023–2027 · CGPA 8.65</span></div>
+<div><b>Competitive programming</b><span>350+ LeetCode problems across arrays, trees, graphs, recursion and DP</span></div>
+</div></section>
+
+<section id="contact" class="rv"><div class="eb">07 · Contact</div><h2>Let’s build something</h2><p>Open to full-time software engineering roles. Reach me at <b>suyashsrivastava063@gmail.com</b>.</p>
+<button class="btn" id="cp">Copy email</button><a class="btn alt" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=suyashsrivastava063@gmail.com&amp;su=Hello%20Suyash" target="_blank" rel="noopener noreferrer">Email via Gmail</a><a class="btn alt" href="https://github.com/SuyashSrivastava4TheW" target="_blank" rel="noopener noreferrer">GitHub</a><a class="btn alt" href="https://www.linkedin.com/in/suyash-srivastava-4tw/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="btn alt" href="https://leetcode.com/u/SUYASH_SRI/" target="_blank" rel="noopener noreferrer">LeetCode</a></section>
+<footer>© <span id="yr"></span> Suyash Srivastava</footer>
+
+<dialog id="dg"><button class="x" id="dx">Close</button><h3 id="dt"></h3><p id="dd" style="color:var(--m)"></p><ul id="dl"></ul><div class="tags" id="dtg"></div></dialog>
+
+<script>
+var $=function(i){return document.getElementById(i)},R=document.documentElement;
+try{var th=localStorage.getItem("th");if(th)R.setAttribute("data-theme",th)}catch(e){}
+$("th").onclick=function(){var d=R.getAttribute("data-theme")?R.getAttribute("data-theme")==="dark":matchMedia("(prefers-color-scheme:dark)").matches,n=d?"light":"dark";R.setAttribute("data-theme",n);try{localStorage.setItem("th",n)}catch(e){}};
+$("yr").textContent=new Date().getFullYear();
+
+/* interactive background: particles that flee the cursor; click to spawn more */
+(function(){var cv=$("bg"),x=cv.getContext("2d"),w,h,ps=[],m={x:-999,y:-999},f=0,c1,c2,rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
+function col(){var s=getComputedStyle(R);c1=s.getPropertyValue("--a").trim();c2=s.getPropertyValue("--a2").trim()}
+function mk(a,b){return{x:a,y:b,vx:(Math.random()-.5)*.6,vy:(Math.random()-.5)*.6,r:Math.random()*1.5+1}}
+function rz(){var d=devicePixelRatio||1;w=innerWidth;h=innerHeight;cv.width=w*d;cv.height=h*d;x.setTransform(d,0,0,d,0,0);ps=[];for(var i=0,n=Math.min(90,Math.round(w*h/14000));i<n;i++)ps.push(mk(Math.random()*w,Math.random()*h))}
+function mv(e){var t=e.touches?e.touches[0]:e;m.x=t.clientX;m.y=t.clientY}
+addEventListener("mousemove",mv);addEventListener("touchmove",mv,{passive:true});addEventListener("mouseout",function(){m.x=m.y=-999});addEventListener("resize",rz);
+addEventListener("click",function(e){if(e.target.closest("button,a,input,dialog"))return;for(var i=0;i<6;i++){var p=mk(e.clientX,e.clientY);p.vx*=5;p.vy*=5;ps.push(p)}if(ps.length>140)ps.splice(0,ps.length-140)});
+function draw(){if(!(f++%60))col();x.clearRect(0,0,w,h);
+for(var i=0;i<ps.length;i++){var p=ps[i];if(!rm){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;
+var dx=p.x-m.x,dy=p.y-m.y,d=Math.sqrt(dx*dx+dy*dy);if(d<130&&d>0){p.vx+=dx/d*.12;p.vy+=dy/d*.12}
+var s=Math.sqrt(p.vx*p.vx+p.vy*p.vy);if(s>1.4){p.vx*=.96;p.vy*=.96}}
+x.globalAlpha=.75;x.fillStyle=c1;x.beginPath();x.arc(p.x,p.y,p.r,0,6.283);x.fill();
+for(var j=i+1;j<ps.length;j++){var q=ps[j],a=p.x-q.x,b=p.y-q.y,e=Math.sqrt(a*a+b*b);if(e<110){x.globalAlpha=(1-e/110)*.4;x.strokeStyle=c2;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}
+var mx=p.x-m.x,my=p.y-m.y,md=Math.sqrt(mx*mx+my*my);if(md<170){x.globalAlpha=(1-md/170)*.6;x.strokeStyle=c1;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(m.x,m.y);x.stroke()}}
+if(!rm)requestAnimationFrame(draw)}
+col();rz();draw()})();
+
+var W=["secure REST APIs.","LLM-powered backends.","multithreaded servers."],wi=0,ci=0,dl=false;
+(function k(){var w=W[wi];ci+=dl?-1:1;$("ty").textContent=w.slice(0,ci);var d=dl?30:70;if(!dl&&ci===w.length){dl=true;d=1500}else if(dl&&ci===0){dl=false;wi=(wi+1)%W.length;d=300}setTimeout(k,d)})();
+
+var P=[
+{n:"Task Manager REST API",c:"Backend",d:"Secure, stateless task API with layered architecture.",t:["Java","Spring Boot","Spring Security","JWT","JPA","MySQL","Swagger"],m:["JWT auth with a custom OncePerRequestFilter and SecurityContextHolder","DTOs, Jakarta validation, and per-user data isolation","Central @RestControllerAdvice exception handling","Swagger UI docs, plus pagination and filtering for task retrieval"]},
+{n:"AI Document Assistant API",c:"AI",d:"Answers questions from uploaded documents using retrieved context.",t:["Java","Spring Boot","Spring AI","LLM API","Vector DB"],m:["Document chunking, embedding generation and vector similarity search","Context-grounded question answering","Evaluated with test queries to spot unsupported answers"]},
+{n:"Multithreaded Web Server",c:"Systems",d:"HTTP server on raw TCP sockets serving static content.",t:["Java","Sockets","TCP/IP","Thread Pool"],m:["Single-threaded and thread-pool architectures","Java concurrency and synchronization for safe request execution","Built for scalability and responsiveness"]}];
+function rp(f){$("pg").innerHTML="";P.forEach(function(p,i){if(f!=="All"&&p.c!==f)return;var b=document.createElement("button");b.className="card pc";
+b.innerHTML="<span class='n'>0"+(i+1)+" / "+p.c+"</span><h3>"+p.n+"</h3><p>"+p.d+"</p><div class='tags'>"+p.t.slice(0,4).map(function(x){return"<i>"+x+"</i>"}).join("")+"</div>";
+b.onmousemove=function(e){var r=b.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;b.style.setProperty("--mx",x*100+"%");b.style.setProperty("--my",y*100+"%");b.style.setProperty("--ry",(x-.5)*8+"deg");b.style.setProperty("--rx",(.5-y)*8+"deg")};
+b.onmouseleave=function(){b.style.setProperty("--rx","0deg");b.style.setProperty("--ry","0deg")};
+b.onclick=function(){$("dt").textContent=p.n;$("dd").textContent=p.d;$("dl").innerHTML=p.m.map(function(x){return"<li>"+x+"</li>"}).join("");$("dtg").innerHTML=p.t.map(function(x){return"<i>"+x+"</i>"}).join("");$("dg").showModal()};
+$("pg").appendChild(b)})}
+function ch(box,list,cb){list.forEach(function(x,i){var b=document.createElement("button");b.className="chip"+(i?"":" on");b.textContent=x;b.onclick=function(){[].forEach.call(box.children,function(k){k.classList.remove("on")});b.classList.add("on");cb(x)};box.appendChild(b)})}
+ch($("pf"),["All","Backend","AI","Systems"],rp);rp("All");
+$("dx").onclick=function(){$("dg").close()};$("dg").onclick=function(e){if(e.target===$("dg"))$("dg").close()};
+
+var S=[["1 · Upload","The document is accepted through a REST endpoint and its text is extracted."],["2 · Chunk","Text is split into small, overlapping chunks so each holds one focused idea."],["3 · Embed","Each chunk becomes a vector of numbers, and the vectors are stored in a vector database."],["4 · Retrieve","The question is embedded too, and similarity search finds the closest chunks."],["5 · Answer","The LLM gets only those chunks as context, so answers stay grounded. Test queries flag unsupported replies."]];
+S.forEach(function(s,i){var b=document.createElement("button");b.innerHTML="<b>"+s[0].split(" · ")[0]+"</b>"+s[0].split(" · ")[1];b.onclick=function(){sp(i)};$("pp").appendChild(b)});
+function sp(i){[].forEach.call($("pp").children,function(c,j){c.classList.toggle("on",i===j)});$("pd").textContent=S[i][1]}sp(0);
+
+var K={"Languages":["Java","C++","Python","SQL","HTML","CSS","JavaScript"],"Backend":["Spring Boot","Spring Security","Spring Data JPA","Hibernate","REST APIs","JWT"],"AI / LLM":["Spring AI","LLMs","RAG","Vector search"],"Core CS":["DSA","OOP","DBMS","Operating Systems","Networking"],"Tools":["MySQL","Git","GitHub","Maven","IntelliJ IDEA","VS Code","Postman","Swagger UI"]};
+function rs(k){$("sb").innerHTML=K[k].map(function(x,i){return"<span style='animation-delay:"+i*50+"ms'>"+x+"</span>"}).join("")}
+ch($("sf"),Object.keys(K),rs);rs("Languages");
+
+var o=$("out");function pr(t,c){var d=document.createElement("div");if(c)d.className=c;d.textContent=t;o.appendChild(d);o.scrollTop=o.scrollHeight}
+var C={help:"Commands: about, skills, projects, education, leetcode, contact, clear",
+about:"Suyash Srivastava, B.Tech CSE at VIT. Backend Java developer adding LLM features with Spring AI.",
+skills:"Java, C++, Python, SQL | Spring Boot, Security, JPA, Hibernate | Spring AI, RAG | MySQL, Git, Maven, Postman",
+projects:"1) Task Manager REST API\n2) AI Document Assistant API\n3) Multithreaded Web Server",
+education:"VIT, B.Tech CSE, 2023-2027, CGPA 8.65",
+leetcode:"350+ problems: arrays, strings, linked lists, stacks, queues, trees, graphs, recursion, DP",
+contact:"suyashsrivastava063@gmail.com"};
+pr("Welcome. Type help to begin.","e");
+$("in").onkeydown=function(e){if(e.key!=="Enter")return;var v=this.value.trim().toLowerCase();this.value="";if(!v)return;pr("$ "+v,"c");
+if(v==="clear")o.innerHTML="";else pr(C[v]||"command not found: "+v+" (try help)")};
+
+function cnt(e){var n=+e.dataset.n,d=+(e.dataset.d||0),s=e.dataset.s||"",t0=null;(function f(t){t0=t0||t;var p=Math.min((t-t0)/1200,1);e.textContent=(n*p).toFixed(d)+(p===1?s:"");if(p<1)requestAnimationFrame(f)})(performance.now())}
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");x.target.querySelectorAll("[data-n]").forEach(function(e){if(!e.dataset.d0){e.dataset.d0=1;cnt(e)}});io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll(".rv").forEach(function(e){io.observe(e)});
+
+var L=document.querySelectorAll("nav a");
+addEventListener("scroll",function(){var h=R.scrollHeight-innerHeight;$("bar").style.width=(h>0?scrollY/h*100:0)+"%";
+var cur="";document.querySelectorAll("section[id]").forEach(function(s){if(s.getBoundingClientRect().top<140)cur=s.id});
+L.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+cur)})},{passive:true});
+
+$("cp").onclick=function(){var b=this;try{navigator.clipboard.writeText("suyashsrivastava063@gmail.com")}catch(e){}b.textContent="Copied ✓";setTimeout(function(){b.textContent="Copy email"},1600)};
+</script>
+</body>
+</html>
